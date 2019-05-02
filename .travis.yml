@@ -13,8 +13,6 @@ after_success:
   - docker build -t angelgoez/multi-nginx ./nginx
   - docker build -t angelgoez/multi-server ./server
   - docker build -t angelgoez/multi-worker ./worker
-  - echo "$DOCKER_ID"
-  - echo "$DOCKER_PASSWORD"
   - echo "Pequeña serenata diurna2" | docker login -u "angelgoez" --password-stdin
   - docker push angelgoez/multi-client 
   - docker push angelgoez/multi-nginx 
